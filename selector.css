@@ -1,0 +1,351 @@
+/*BODY*/
+body,
+yt-formatted-string,
+span {
+  font-family: "Vazirmatn", serif !important;
+}
+/*Header*/
+ytd-masthead#masthead {
+  background: var(--newbackground) !important;
+  background-size: cover !important;
+}
+ytd-masthead#masthead:not([theater]) #container {
+  backdrop-filter: var(--blur) !important;
+}
+
+ytd-masthead#masthead[theater][is-watch-page] #container {
+  background-color: #000;
+  backdrop-filter: var(--blur) !important;
+}
+/*Horizontal navigation under header  */
+ytd-feed-filter-chip-bar-renderer #chips-wrapper {
+  background: var(--bgNavigation1) !important;
+  backdrop-filter: blur(10px);
+}
+
+/*VERTICAL Navigation Left*/
+ytd-app #content ytd-mini-guide-renderer {
+  background: var(--bgNavigation2);
+  background-size: cover;
+  background-position: center;
+}
+
+ytd-mini-guide-entry-renderer {
+  background-color: transparent !important;
+}
+
+/*YOUTUBE HOME*/
+ytd-page-manager#page-manager {
+  background: var(--newbackground);
+  background-size: cover;
+  background-position: center;
+  background-clip: content-box;
+  background-attachment: fixed;
+}
+
+/*Youtube Drawer  slideleft menu*/
+#content tp-yt-app-drawer #guide-content {
+  background: var(--bgDrawer);
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+}
+
+#content tp-yt-app-drawer #guide-content yt-formatted-string {
+  color: var(--color);
+}
+/*CARDS CALL TO ACTION*/
+ytd-two-column-browse-results-renderer ytd-item-section-renderer,
+ytd-rich-item-renderer,
+ytd-grid-video-renderer,
+ytd-engagement-panel-section-list-renderer {
+  border-radius: var(--radius) !important;
+  box-sizing: border-box;
+  margin-left: 4px !important;
+  margin-right: 4px;
+  background: var(--bgBox) !important;
+  background-size: cover;
+  border: var(--border) !important;
+  backdrop-filter: var(--blur) !important;
+  /*border-image:linear-gradient(45deg, #BF953F, #FCF6BA, #B38728, #FCF6BA, #AA771C) 1 !important;*/
+  overflow: hidden !important;
+  box-shadow: inset 0px -16px 100px -50px rgba(0, 0, 0, 0.05);
+  box-shadow: var(--boxShaddow);
+}
+
+ytd-rich-item-renderer #thumbnail * {
+  border-radius: var(--radius) !important;
+}
+ytd-app ytd-video-preview #video-preview-container {
+  border-top-left-radius: var(--radius) !important;
+  border-top-right-radius: var(--radius) !important;
+  /*overflow: hidden !important; */
+}
+ytd-rich-item-renderer[rendered-from-rich-grid] ytd-thumbnail #thumbnail {
+  border-radius: 8 !important;
+  border-bottom-right-radius: 0 !important;
+  border-bottom-left-radius: 0 !important;
+  z-index: 1;
+}
+
+ytd-rich-item-renderer[rendered-from-rich-grid] #details {
+  padding: var(--padding) !important;
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: center !important;
+}
+
+ytd-rich-section-renderer ytd-brand-video-shelf-renderer #dismissible {
+  background-color: var(--bgBoxLighter) !important;
+}
+/*Call to action content*/
+ytd-rich-item-renderer[rendered-from-rich-grid] #content {
+  box-sizing: inherit;
+}
+/*CALL to Action Meta text channel name */
+ytd-rich-item-renderer #meta *,
+ytd-video-renderer #meta *,
+ytd-grid-video-renderer #meta *,
+ytd-playlist-video-renderer #meta * {
+  color: var(--color) !important;
+}
+ytd-rich-item-renderer #meta,
+ytd-video-renderer #meta,
+ytd-grid-video-renderer #meta,
+ytd-playlist-video-renderer #meta {
+  display: table !important;
+}
+/*///////////////
+/////YOUTUBE Player//
+///////////////*/
+
+#cinematics-container {
+  opacity: 1 !important;
+}
+
+/*Primary column*/
+ytd-page-manager ytd-watch-flexy #columns #primary,
+ytd-page-manager ytd-watch-flexy #columns #secondary {
+  padding: 15px;
+  padding-left: 12px;
+  padding-right: 12px;
+  border-radius: var(--radius);
+  border: var(--border) !important;
+  background: var(--bgBoxWatch, var(--bgBox)) !important;
+  margin-right: 10px;
+  margin-top: 10px;
+  z-index: 99;
+}
+
+ytd-watch-next-secondary-results-renderer yt-related-chip-cloud-renderer {
+  background-color: var(--bgBoxLighter);
+  padding: 10px;
+  border-radius: var(--radius);
+  border: var(--border);
+}
+#above-the-fold #top-row * {
+  border-radius: var(--radius);
+}
+
+#player-container ytd-player#ytd-player {
+  border-radius: var(--radius) !important;
+}
+/* like button*/
+like-button-view-model yt-icon path {
+  fill: #4287f5 !important;
+}
+/*dis-Like*/
+dislike-button-view-model yt-icon svg {
+  fill: #f702ca !important;
+}
+
+/*comment like/dis-Like button*/
+ytd-comment-engagement-bar #dislike-button svg {
+  fill: #f702ca !important;
+}
+ytd-comment-engagement-bar #like-button svg {
+  fill: #4287f5 !important;
+}
+
+html:not([dark]) ytd-comment-engagement-bar #reply-button-end span {
+  color: #000 !important;
+}
+
+html:not([dark]) ytd-comment-view-model tp-yt-paper-button#more span {
+  color: #000 !important;
+}
+
+html:not([dark]) ytd-comment-engagement-bar #vote-count-middle {
+  color: #000 !important;
+}
+/*////// COMMENT //////*/
+/*Comment text*/
+yt-attributed-string[user-input]#content-text span {
+  text-align: justify;
+  display: block;
+  dir: auto !important ;
+}
+yt-attributed-string[user-input]#content-text span:has(> img) {
+  display: inline !important;
+}
+
+ytd-comment-thread-renderer #header #published-time-text a {
+  background-color: #fff3 !important;
+  padding: 3px !important;
+}
+
+/* Watch page*/
+/*LIST suggested Videos*/
+ytd-compact-video-renderer,
+yt-lockup-view-model {
+  cursor: pointer;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-left: 5px !important;
+  padding-right: 5px !important;
+  margin: 0 !important;
+  margin-top: var(--boxMargin) !important;
+  margin-bottom: var(--boxMargin) !important;
+  border-radius: 0 !important;
+  overflow: hidden !important;
+  transition: background 1s ease;
+  border-bottom: var(--borderInnerBox, var(--border));
+}
+ytd-compact-video-renderer:hover,
+yt-lockup-view-model:hover {
+  background: var(--bgHoverRender) !important;
+}
+
+html:not([dark]) ytd-compact-video-renderer ytd-video-meta-block *,
+html:not([dark]) yt-lockup-view-model ytd-video-meta-block * {
+  color: #222 !important;
+}
+/*LIVE CHAT*/
+#secondary ytd-live-chat-frame,
+#secondary ytd-live-chat-frame iframe {
+  border-radius: var(--radius);
+}
+
+/*////////////////////////////
+/// YouTube Search result/////
+////////////////////////////*/
+ytd-search
+  ytd-two-column-search-results-renderer
+  ytd-video-renderer
+  #dismissible
+  > div {
+  margin: auto;
+}
+/* search resault meta datas // Exept thumbnail metadata  */
+ytd-two-column-search-results-renderer #dismissible *:not(ytd-thumbnail *),
+ytd-video-renderer #dismissible *:not(ytd-thumbnail *) {
+  color: var(--color) !important;
+}
+
+ytd-two-column-search-results-renderer ytm-shorts-lockup-view-model-v2,
+ytd-two-column-search-results-renderer ytd-video-renderer {
+  border-radius: var(--radius) !important;
+  box-sizing: border-box;
+  margin-left: 4px !important;
+  margin-right: 4px;
+  background: var(--bgBox) !important;
+  background-size: cover;
+  border: var(--border) !important;
+  backdrop-filter: var(--blur) !important;
+  /*border-image:linear-gradient(45deg, #BF953F, #FCF6BA, #B38728, #FCF6BA, #AA771C) 1 !important;*/
+  overflow: hidden !important;
+  box-shadow: inset 0px -16px 100px -50px rgba(0, 0, 0, 0.05);
+  box-shadow: var(--boxShaddow);
+}
+
+/*////////////////////////////
+/// YouTube Shorts       /////
+////////////////////////////*/
+ytd-page-manager ytd-shorts .navigation-container {
+  background-color: none !important;
+  background: none !important;
+}
+#shorts-inner-container ytd-reel-player-overlay-renderer #metapanel {
+  opacity: 0.3;
+  transition: opacity 0.3s ease;
+}
+#shorts-inner-container ytd-reel-player-overlay-renderer #metapanel:hover {
+  opacity: 1;
+}
+
+/*//////////////////////////
+///////Specific Style///////
+//////////////////////////*/
+
+/*Call toaction Avatar Style*/
+html:not([dark])
+  ytd-rich-item-renderer[rendered-from-rich-grid]
+  #avatar-container {
+  top: -25px;
+  border: 4px solid #e89cfa !important;
+  outline: 2px solid #e89cfa;
+  outline-offset: 7px;
+  box-shadow: 0px 10px 15px -3px rgba(0, 0, 0, 0.4);
+  border-radius: 50%;
+  z-index: 99;
+}
+
+html[dark] ytd-rich-item-renderer[rendered-from-rich-grid] #avatar-container {
+  top: -25px;
+  border: 4px solid #e89cfa88 !important;
+  outline: 2px solid #e89cfa88;
+  outline-offset: 7px;
+  box-shadow: 0px 10px 15px -3px rgba(255, 255, 255, 0.2);
+  border-radius: 50%;
+  z-index: 99;
+}
+ytd-rich-item-renderer[rendered-from-rich-grid] #content {
+  /*border-bottom: 5px solid #1fd5ff88;*/
+  box-sizing: inherit;
+}
+
+/*///////////////////////////
+// Setting page ////////
+///////////////////////////*/
+ytd-two-column-browse-results-renderer ytd-item-section-renderer {
+  padding: var(--padding);
+  margin: var(--padding);
+  box-shadow: none;
+}
+
+/*///////////////////////////
+// ENTIRE FONT STYLE ////////
+///////////////////////////*/
+h4,
+yt-formatted-string:not(
+    ytd-popup-container yt-formatted-string,
+    yt-related-chip-cloud-renderer yt-formatted-string,
+    ytd-feed-filter-chip-bar-renderer yt-formatted-string,
+    ytd-search-header-renderer yt-formatted-string
+  ),
+h3 span,
+div#label:not(ytd-thumbnail #label),
+div#title:not(ytd-thumbnail #title),
+yt-icon
+  svg:not(
+    button[aria-pressed="true"] svg,
+    ytd-thumbnail yt-icon svg,
+    yt-inline-player-controls yt-icon svg
+  ) {
+  color: var(--color) !important;
+}
+
+/*Hyper Link*/
+yt-formatted-string a {
+  color: var(--anchorLink) !important;
+}
+
+/*/////////////////////
+// FocusMode AutoHide YouTube-Watch
+///////////////////////////*/
+.focusModeText,
+.autoLikeModeText {
+  color: var(--color) !important;
+  font-weight: 500px;
+}
