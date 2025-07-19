@@ -2,7 +2,7 @@
   "info":{"version":"1.0.0.0"},
   "general": {
     "mastHead": "#ytd-masthead",
-    "headerCenter": "ytd-masthead #container #center",
+    "headerCenter": "ytd-masthead #container #start",
     "headerStart": "#ytd-masthead #container #start",
     "primaryInnerPlayer": "#primary-inner #player",
     "primaryInnerBelow": "#primary-inner #below",
