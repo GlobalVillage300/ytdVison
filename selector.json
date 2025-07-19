@@ -1,8 +1,9 @@
 {
+  "info":{"version":"1.0.0.0"},
   "general": {
     "mastHead": "#ytd-masthead",
     "headerCenter": "ytd-masthead #container #center",
-    "headerStart": "#ytd-masthead #container #center",
+    "headerStart": "#ytd-masthead #container #start",
     "primaryInnerPlayer": "#primary-inner #player",
     "primaryInnerBelow": "#primary-inner #below",
     "columsSecondary2Inner": "#columns #secondary #secondary-inner",
