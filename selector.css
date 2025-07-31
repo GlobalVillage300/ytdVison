@@ -198,7 +198,7 @@ ytd-comment-thread-renderer #header #published-time-text a {
 /* Watch page*/
 /*LIST suggested Videos*/
 ytd-compact-video-renderer,
-yt-lockup-view-model:not(ytd-rich-item-renderer > yt-lockup-view-model) {
+#secondary-inner yt-lockup-view-model{
   cursor: pointer;
   padding-top: 10px;
   padding-bottom: 10px;
