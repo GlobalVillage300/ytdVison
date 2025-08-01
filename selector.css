@@ -74,7 +74,7 @@ ytd-engagement-panel-section-list-renderer {
   box-shadow: var(--boxShaddow);
 }
 
-ytd-rich-item-renderer #thumbnail * ,yt-thumbnail-view-model {
+ytd-rich-item-renderer #thumbnail * ,ytd-rich-item-renderer yt-thumbnail-view-model {
   border-radius: var(--radius) !important;
 }
 ytd-app ytd-video-preview #video-preview-container {
