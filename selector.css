@@ -237,12 +237,15 @@ ytd-search
   > div {
   margin: auto;
 }
-/* search resault meta datas // Exept thumbnail metadata  */
+/* search result meta datas // Exept thumbnail metadata  */
 ytd-two-column-search-results-renderer #dismissible *:not(ytd-thumbnail *),
 ytd-video-renderer #dismissible *:not(ytd-thumbnail *) {
   color: var(--color) !important;
 }
-
+/* search result thumbnail */
+ytd-two-column-search-results-renderer #dismissible #thumbnail{
+  border-radius: var(--radius) !important;
+}
 ytd-two-column-search-results-renderer ytm-shorts-lockup-view-model-v2,
 ytd-two-column-search-results-renderer ytd-video-renderer {
   border-radius: var(--radius) !important;
