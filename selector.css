@@ -45,7 +45,7 @@ ytd-page-manager#page-manager {
 
 /*Youtube Drawer  slideleft menu*/
 #content tp-yt-app-drawer #guide-content {
-  background: var(--bgDrawer);
+  background: var(--bgDrawer) !important;
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
@@ -359,5 +359,6 @@ yt-formatted-string a {
   color: var(--color) !important;
   font-weight: 500px;
 }
+
 
 
