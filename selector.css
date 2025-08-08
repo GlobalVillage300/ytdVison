@@ -276,7 +276,10 @@ ytd-page-manager ytd-shorts .navigation-container {
 #shorts-inner-container ytd-reel-player-overlay-renderer #metapanel:hover {
   opacity: 1;
 }
-
+/* Hide outer tag's (parent) border */
+#shorts-panel-container #anchored-panel{
+    border:none;
+}
 /*//////////////////////////
 ///////Specific Style///////
 //////////////////////////*/
@@ -352,3 +355,4 @@ yt-formatted-string a {
   color: var(--color) !important;
   font-weight: 500px;
 }
+
