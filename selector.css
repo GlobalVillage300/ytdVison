@@ -280,6 +280,10 @@ ytd-page-manager ytd-shorts .navigation-container {
 #shorts-panel-container #anchored-panel{
     border:none;
 }
+ytd-engagement-panel-section-list-renderer #content,ytd-engagement-panel-section-list-renderer #header{
+  Background:none !important;
+  Background-color: unset !important;
+}
 /*//////////////////////////
 ///////Specific Style///////
 //////////////////////////*/
@@ -355,4 +359,5 @@ yt-formatted-string a {
   color: var(--color) !important;
   font-weight: 500px;
 }
+
 
