@@ -35,12 +35,23 @@ ytd-mini-guide-entry-renderer {
 }
 
 /*YOUTUBE HOME*/
-ytd-page-manager#page-manager {
+COPY-ytd-page-manager#page-manager {
   background: var(--newbackground);
   background-size: cover;
   background-position: center;
   background-clip: content-box;
   background-attachment: fixed;
+}
+ytd-page-manager#page-manager::before {
+    content:'';
+    width:100%;
+    height:100%;
+    position:fixed;
+  background: var(--newbackground);
+  background-size: cover;
+  background-position: center center;
+  background-clip: content-box;
+  
 }
 
 /*Youtube Drawer  slideleft menu*/
@@ -359,6 +370,7 @@ yt-formatted-string a {
   color: var(--color) !important;
   font-weight: 500px;
 }
+
 
 
 
