@@ -16,11 +16,13 @@ ytd-masthead#masthead:not([theater]) #container {
 ytd-masthead#masthead[theater][is-watch-page] #container {
   background-color: #000;
   backdrop-filter: var(--blur) !important;
+  -webkit-backdrop-filter: var(--blur) !important;
 }
 /*Horizontal navigation under header  */
 ytd-feed-filter-chip-bar-renderer #chips-wrapper {
   background: var(--bgNavigation1) !important;
-  backdrop-filter: blur(10px);
+  backdrop-filter: var(--blur);
+  -webkit-backdrop-filter: var(--blur);
 }
 
 /*VERTICAL Navigation Left*/
@@ -78,7 +80,8 @@ ytd-engagement-panel-section-list-renderer {
   background: var(--bgBox) !important;
   background-size: cover;
   border: var(--border) !important;
-  backdrop-filter: var(--blur) !important;
+  backdrop-filter: var(--blur);
+  -webkit-backdrop-filter: var(--blur);
   /*border-image:linear-gradient(45deg, #BF953F, #FCF6BA, #B38728, #FCF6BA, #AA771C) 1 !important;*/
   overflow: hidden !important;
   box-shadow: inset 0px -16px 100px -50px rgba(0, 0, 0, 0.05);
@@ -144,6 +147,8 @@ ytd-page-manager ytd-watch-flexy #columns #secondary {
   border-radius: var(--radius);
   border: var(--border) !important;
   background: var(--bgBoxWatch, var(--bgBox)) !important;
+  backdrop-filter: var(--blur);
+  -webkit-backdrop-filter: var(--blur);
   margin-right: 10px;
   margin-top: 10px;
   z-index: 99;
@@ -267,6 +272,7 @@ ytd-two-column-search-results-renderer ytd-video-renderer {
   background-size: cover;
   border: var(--border) !important;
   backdrop-filter: var(--blur) !important;
+  -webkit-backdrop-filter: var(--blur) !important;
   /*border-image:linear-gradient(45deg, #BF953F, #FCF6BA, #B38728, #FCF6BA, #AA771C) 1 !important;*/
   overflow: hidden !important;
   box-shadow: inset 0px -16px 100px -50px rgba(0, 0, 0, 0.05);
@@ -370,6 +376,7 @@ yt-formatted-string a {
   color: var(--color) !important;
   font-weight: 500px;
 }
+
 
 
 
