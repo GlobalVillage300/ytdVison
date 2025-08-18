@@ -147,8 +147,6 @@ ytd-page-manager ytd-watch-flexy #columns #secondary {
   border-radius: var(--radius);
   border: var(--border) !important;
   background: var(--bgBoxWatch, var(--bgBox)) !important;
-  backdrop-filter: var(--blur);
-  -webkit-backdrop-filter: var(--blur);
   margin-right: 10px;
   margin-top: 10px;
   z-index: 99;
@@ -376,6 +374,7 @@ yt-formatted-string a {
   color: var(--color) !important;
   font-weight: 500px;
 }
+
 
 
 
