@@ -265,6 +265,13 @@ html:not([dark]) yt-lockup-view-model ytd-video-meta-block * {
 #secondary ytd-live-chat-frame iframe {
   border-radius: var(--radius);
 }
+/* Video-Lists Items on seconday */
+#secondary ytd-playlist-panel-renderer #content-header{
+    background : var(--bgAlpha9);
+}
+#secondary ytd-playlist-panel-renderer #items{
+    background : var(--bgAlpha6);
+} /* end of Video-list*/
 
 /*////////////////////////////
 /// YouTube Search result/////
@@ -405,3 +412,4 @@ yt-formatted-string a {
   color: var(--color) !important;
   font-weight: 500px;
 }
+
