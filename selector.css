@@ -267,8 +267,9 @@ html:not([dark]) yt-lockup-view-model ytd-video-meta-block * {
 }
 /* Video-Lists Items on seconday */
 #secondary ytd-playlist-panel-renderer #container > div{
-    background : var(--bgAlphaC);
+    
 }
+
 #secondary ytd-playlist-panel-renderer #items{
     background : var(--bgAlpha9);
 } /* end of Video-list*/
@@ -412,5 +413,6 @@ yt-formatted-string a {
   color: var(--color) !important;
   font-weight: 500px;
 }
+
 
 
