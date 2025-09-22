@@ -43,7 +43,7 @@ ytd-masthead, ytd-masthead#masthead > #background{
     background-color:unset !important;
 }
 ytd-masthead#masthead > #background{
-   background:var(--bgHeadertop) !important;
+   background:var(--bgAlphaC) !important;
    /*  backdrop-filter:var(--blur);
     -webkit-backdrop-filter:var(--blur);*/
 }
@@ -413,6 +413,7 @@ yt-formatted-string a {
   color: var(--color) !important;
   font-weight: 500px;
 }
+
 
 
 
