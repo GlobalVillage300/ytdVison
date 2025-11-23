@@ -394,7 +394,10 @@ ytd-rich-item-renderer[rendered-from-rich-grid] #content {
 ytd-page-manager > ytd-browse[has-sidebar] > ytd-two-column-browse-results-renderer{
   z-index: 1;
 }
-
+/*// Saved page (playlist layout not clickable `z-index`) //*/
+ytd-browse > ytd-playlist-header-renderer {
+    z-index: 2;
+}
 ytd-browse > ytd-settings-sidebar-renderer{
     background:var(--bgAlpha6) !important;
     backdrop-filter: var(--blur);
@@ -450,6 +453,7 @@ ytd-popup-container #contentWrapper ytd-multi-page-menu-renderer{
     backdrop-filter: var(--blur);
     -webkit-backdrop-filter: var(--blur);
 }
+
 
 
 
