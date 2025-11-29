@@ -232,7 +232,7 @@ html:not([dark]) ytd-comment-engagement-bar #vote-count-middle {
 /*Comment text*/
 yt-attributed-string[user-input]#content-text span {
   text-align: justify;
-  display: block;
+  /* display: block; */
   dir: auto !important ;
 }
 yt-attributed-string[user-input]#content-text span:has(> img) {
@@ -453,6 +453,7 @@ ytd-popup-container #contentWrapper ytd-multi-page-menu-renderer{
     backdrop-filter: var(--blur);
     -webkit-backdrop-filter: var(--blur);
 }
+
 
 
 
