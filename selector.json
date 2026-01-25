@@ -1,9 +1,13 @@
 {
-  "info":{"version":"1.0.0.0"},
+  "meta": {
+    "version": 1,
+    "date": "24-01-2026",
+    "description": "Centralized YouTube DOM selectors used by the extension. Updated remotely to adapt to YouTube layout changes without requiring a store update."
+  },
   "general": {
-    "mastHead": "#ytd-masthead",
+    "mastHead": "ytd-masthead",
     "headerCenter": "ytd-masthead #container #center",
-    "headerStart": "#ytd-masthead #container #start",
+    "headerStart": "ytd-masthead #container #start",
     "primaryInnerPlayer": "#primary-inner #player",
     "primaryInnerBelow": "#primary-inner #below",
     "columsSecondary2Inner": "#columns #secondary #secondary-inner",
@@ -12,7 +16,9 @@
   },
   "liveChat": {
     "liveChatFrame": "ytd-live-chat-frame iframe",
-    "injectedLivechatCss": "#injected-livechat-css"
+    "injectedLivechatCss": "#injected-livechat-css",
+    "chatApp": "yt-live-chat-app",
+    "messageSegments": "yt-live-chat-text-message-renderer,yt-live-chat-paid-message-renderer,yt-live-chat-paid-sticker-renderer,yt-live-chat-membership-item-renderer"
   },
   "shortVideo": {
     "shelfRenderer1": "ytd-rich-shelf-renderer",
@@ -21,5 +27,13 @@
     "shelfRenderer2": "ytd-reel-shelf-renderer",
     "shelfHeader2": "#title-container h2",
     "contentsContainer2": "#contents"
+  },
+  "buttons": {
+    "toggleButtons": "yt-smartimation button-view-model",
+    "subscribe": "#subscribe-button ytd-subscribe-button-renderer",
+    "subscribeShape": "#subscribe-button-shape",
+    "like": "like-button-view-model button",
+    "dislike": "dislike-button-view-model button"
   }
 }
+
