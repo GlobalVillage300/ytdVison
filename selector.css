@@ -30,7 +30,7 @@ body > ytd-app > #content::before{
 /*Header*/
 
 ytd-app > #content > #frosted-glass{
-    background: var(--bgHeadertop) !important;
+    background: var(--bgHeadertop,#fff) !important;
     backdrop-filter: var(--blur) !important;
     -webkit-backdrop-filter: var(--blur) !important;
 
@@ -453,6 +453,7 @@ ytd-popup-container #contentWrapper ytd-multi-page-menu-renderer{
     backdrop-filter: var(--blur);
     -webkit-backdrop-filter: var(--blur);
 }
+
 
 
 
