@@ -43,7 +43,7 @@ ytd-masthead, ytd-masthead#masthead > #background{
     background-color:unset !important;
 }
 ytd-masthead#masthead > #background{
-   background:var(--bgHeadertop) !important;
+   background:var(--bgHeadertop ,#fff) !important;
    /*  backdrop-filter:var(--blur);
     -webkit-backdrop-filter:var(--blur);*/
    backdrop-filter: var(--acceleratedBlur);
@@ -453,6 +453,7 @@ ytd-popup-container #contentWrapper ytd-multi-page-menu-renderer{
     backdrop-filter: var(--blur);
     -webkit-backdrop-filter: var(--blur);
 }
+
 
 
 
