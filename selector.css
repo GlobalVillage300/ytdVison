@@ -1,7 +1,12 @@
 /*BODY*/
-body,
+/*body,
 yt-formatted-string, #chips-wrapper button div,
 span {
+  font-family: "Vazirmatn", serif !important;
+} */
+
+:lang(fa),
+:lang(ar) {
   font-family: "Vazirmatn", serif !important;
 }
 
@@ -453,6 +458,7 @@ ytd-popup-container #contentWrapper ytd-multi-page-menu-renderer{
     backdrop-filter: var(--blur);
     -webkit-backdrop-filter: var(--blur);
 }
+
 
 
 
