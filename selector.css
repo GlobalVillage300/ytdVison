@@ -3,12 +3,12 @@
 yt-formatted-string, #chips-wrapper button div,
 span {
   font-family: "Vazirmatn", serif !important;
-} */
+} 
 
 :lang(fa),
 :lang(ar) {
   font-family: "Vazirmatn", serif !important;
-}
+} */
 
 /* BACKGROUND GENERAL*/
 ytd-masthead#masthead ,ytd-masthead#masthead-container, #frosted-glass ,ytd-app #content ytd-mini-guide-renderer,
@@ -458,6 +458,7 @@ ytd-popup-container #contentWrapper ytd-multi-page-menu-renderer{
     backdrop-filter: var(--blur);
     -webkit-backdrop-filter: var(--blur);
 }
+
 
 
 
