@@ -209,6 +209,7 @@ ytd-watch-flexy:not([hidden]) #primary::before , ytd-watch-flexy:not([hidden]) #
         background: var(--bgBoxWatch);
         backdrop-filter: var(--acceleratedBlur);
         -webkit-backdrop-filter: var(--acceleratedBlur);
+		z-index: -1;
 }
 ytd-watch-next-secondary-results-renderer yt-related-chip-cloud-renderer {
   background-color: var(--bgBoxLighter);
