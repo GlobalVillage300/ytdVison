@@ -8,7 +8,7 @@ span {
 :lang(fa),
 :lang(ar) {
   font-family: "Vazirmatn", serif !important;
-} */
+} */ 
 
 /* BACKGROUND GENERAL*/
 ytd-masthead#masthead ,ytd-masthead#masthead-container, #frosted-glass ,ytd-app #content ytd-mini-guide-renderer,
@@ -177,40 +177,30 @@ ytd-playlist-video-renderer #meta {
 }
 
 /*Primary column*/
-ytd-page-manager ytd-watch-flexy #columns #primary,
-ytd-page-manager ytd-watch-flexy #columns #secondary {
-  position: relative;
-	min-height: 2000px;
-	view-transition-name: unset !important;
-	overflow: clip;
-  
-  adding: 15px;
-	padding-left: 12px;
-	padding-right: 12px;
-	border-radius: var(--radius);
-	border: var(--border) !important;
-	/* backdrop-filter: var(--acceleratedBlur); */
-	-webkit-backdrop-filter: var(--acceleratedBlur);
-	/* background: var(--bgBoxWatch, var(--bgBox)) !important; */
-	margin-right: 10px;
-	margin-top: 10px;
-	z-index: 99;
+/********** WATCH PAGE ************/
+ytd-watch-flexy:not([hidden]) #primary #primary-inner,
+ytd-watch-flexy:not([hidden]) #secondary #secondary-inner {
+    overflow:clip;
+    padding: var(--padding);
+    border-radius: var(--radius);
+    margin:var(--margin);
 }
-ytd-watch-flexy:not([hidden]) #primary::before , ytd-watch-flexy:not([hidden]) #secondary::before {
-        content: "";
-        position: sticky;
-        top: 0;
-        left: 0;
-        display: block;
-        width: 130%;
-        height: 100vh;
-        margin-top: -100vh;
-        margin-left: -10%;
-        background: var(--bgBoxWatch);
-        backdrop-filter: var(--acceleratedBlur);
-        -webkit-backdrop-filter: var(--acceleratedBlur);
-		z-index: -1;
+ytd-watch-flexy:not([hidden]) #primary #primary-inner::before,
+ytd-watch-flexy:not([hidden]) #secondary > #secondary-inner::before {
+content: "";
+position: sticky;
+top: 0;
+left: 0;
+display: block;
+width: 130%;
+height: 100vh;
+margin-top: -100vh;
+margin-left: -10%;
+background: var(--bgBoxWatch);
+backdrop-filter: var(--acceleratedBlur);
+-webkit-backdrop-filter: var(--acceleratedBlur);
 }
+
 ytd-watch-next-secondary-results-renderer yt-related-chip-cloud-renderer {
   background-color: var(--bgBoxLighter);
   padding: 10px;
