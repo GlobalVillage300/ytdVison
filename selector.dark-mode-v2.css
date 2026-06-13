@@ -1,0 +1,59 @@
+
+
+/* global font */
+/*yt-lockup-metadata-view-model * , yt-formatted-string *, yt-formatted-string, #secondary-inner *, #primary-inner *,#items * ,#title,#name,*/
+body *:not(ytd-watch-flexy #player-container *, ytd-watch-flexy #player-container-outer * , ytd-player#inline-player *,yt-thumbnail-bottom-overlay-view-model * ){
+    color: var(--color) !important;
+}
+button * {/* All buttons top menu at #secondary/suggested video */
+    background-color:unset !important;
+}
+button[aria-selected="true"] > * { /* adjust bg color with text color, top menu at #secondary/suggested video */
+    background-color:var(--color-invert) !important;
+}
+/* text with background-color */
+ytd-author-comment-badge-renderer{
+    background: var(--color-invert) !important;
+}
+
+/* HEADER */
+/* header searchbox dark-light-mode effect */
+ytd-masthead #center yt-searchbox div:has(> form), ytd-masthead #center yt-searchbox button{
+    border:var(--border-thin) !important;
+    background: var(--main-col-light) !important;
+}
+ytd-masthead #center yt-searchbox button, ytd-masthead #center yt-searchbox button svg{
+    fill:var(--color) !important;
+    color:var(--color) !important;
+}
+ytd-masthead #center yt-searchbox > div[role="listbox"] ,ytd-masthead #center yt-searchbox > div[role="listbox"] > *{
+    color:var(--color) !important;
+    background: var(--main-col-light) !important;
+}
+
+/* youtube logo */
+yt-icon svg , yt-button-shape svg{
+    fill: var(--color) !important;
+}
+
+/* whatchlater/playlist page */
+ytd-playlist-panel-renderer #container *{
+    background-color:unset !important;
+    1background:unset !important;
+}
+
+/******** DRAWER MENU ********/
+tp-yt-iron-dropdown yt-contextual-sheet-layout{/* drawer-minimized, target: on-hover popup dropdown menu */
+    border:var(--border-thin) !important;
+    background: var(--main-col-light) !important;
+}
+/* Popup-menu popup-confirmation popup-notification */
+yt-notification-action-renderer tp-yt-paper-toast{
+    color:var(--color) !important;
+    background: var(--main-col-dark) !important;
+    border:var(--border-thin) !important;
+
+}
+#video-preview-container #media-container button * {
+    fill:#aaa !important;
+}
