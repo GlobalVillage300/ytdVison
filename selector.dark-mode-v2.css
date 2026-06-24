@@ -1,9 +1,12 @@
 
 
 /* global font */
-/*yt-lockup-metadata-view-model * , yt-formatted-string *, yt-formatted-string, #secondary-inner *, #primary-inner *,#items * ,#title,#name,*/
-body *:not(ytd-watch-flexy #player-container *, ytd-watch-flexy #player-container-outer * , ytd-player#inline-player *,yt-thumbnail-bottom-overlay-view-model * ){
+body *:not(ytd-watch-flexy #player-container *, ytd-watch-flexy #player-container-outer * , ytd-player#inline-player *,yt-thumbnail-bottom-overlay-view-model *,#yThemeProConsentModal *){
     color: var(--color) !important;
+}
+
+#secondary #container #items{
+    z-index:1 !important; /* up bring video lists (video series) , z-index:unset/0 send video texts behides */
 }
 button * {/* All buttons top menu at #secondary/suggested video */
     background-color:unset !important;
@@ -25,6 +28,7 @@ ytd-masthead #center yt-searchbox div:has(> form), ytd-masthead #center yt-searc
 ytd-masthead #center yt-searchbox button, ytd-masthead #center yt-searchbox button svg{
     fill:var(--color) !important;
     color:var(--color) !important;
+    background-color: var(--color-invert) !important;
 }
 ytd-masthead #center yt-searchbox > div[role="listbox"] ,ytd-masthead #center yt-searchbox > div[role="listbox"] > *{
     color:var(--color) !important;
