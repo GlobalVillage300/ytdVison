@@ -94,7 +94,10 @@ ytd-page-manager ytd-watch-flexy #columns #secondary {
     view-transition-name: unset !important;
     overflow: clip;
 }
-
+ytd-page-manager ytd-watch-flexy #columns #secondary-inner > div{
+    /* Since around June 2026, YouTube allows rearranging the right-side panels (chat, comments, suggested videos). This CSS adjustment reduces the height by 50px to ensure content remains readable even with layout shifts. */
+    max-height: calc(100% - 50px);
+}
 ytd-watch-flexy:not([hidden]) #primary #primary-inner,
 ytd-watch-flexy:not([hidden]) #secondary #secondary-inner {
     overflow:clip;
@@ -327,6 +330,18 @@ ytd-browse[page-subtype="playlist"]  ytd-playlist-video-renderer {
     margin-bottom: var(--margin) !important;
 }
 
+/******** Liked Video Page ********/
+ytd-browse[page-subtype="playlist"]  #contents yt-lockup-view-model{
+    /* Watch Later Page uses attribut page-subtype=playlist */
+    border-radius: var(--radius) !important;
+    box-sizing: border-box;
+    background: var(--bgBox) !important;
+    border: var(--border-thin) !important;
+    overflow: hidden !important;
+    backdrop-filter: var(--acceleratedBlur) !important;
+    -webkit-backdrop-filter: var(--acceleratedBlur) !important;
+    margin-bottom: var(--margin) !important;
+}
 /******** Mini Player ********/
 ytd-miniplayer {
     border-radius: var(--radius) !important;
@@ -378,14 +393,12 @@ ytd-browse[page-subtype="WEB_PAGE_TYPE_SETTINGS"] ytd-section-list-renderer #con
     padding: var(--padding);
 }
 
-
-
 /******** THE REST ********/
 
 yt-confirm-dialog-renderer{
     /* ex: deleteing a comment? */
-    background:var(--main-color) !important;
-    background-color:var(--main-color) !important;
+    background:var(--main-col-light) !important;
+    background-color:var(--main-col-light) !important;
 }
 
 ytd-menu-popup-renderer{
@@ -393,8 +406,3 @@ ytd-menu-popup-renderer{
 background:var(--main-color) !important;
 background-color:var(--main-color) !important;
 }
-
-
-
-
-
