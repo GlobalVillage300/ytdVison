@@ -1,409 +1,68 @@
-/* v2 */
-/* BACKGROUND GENERAL*/
-ytd-masthead#masthead ,ytd-masthead#masthead-container, #frosted-glass ,
-#content tp-yt-app-drawer #guide-content   {
-    background:none !important;
-    background-color:unset !important;
-}
+/* Version: 3 */
 
-/*******GENERAL*******/
-div#header,div#content,#div#contents{
-    background-color:unset !important;
-}
-body > ytd-app::before{
-    content: "";
-    width:100%;
-    height:100vh;
-    position:fixed;
-    top:0;left:0;
-    background: var(--newbackground);
-    background-size: cover;
-    background-position: center center;
-    background-repeat: no-repeat;
-    background-clip: content-box;
-}
-/* youtube popup dialog ex: search-filters, Share.. */
-ytd-popup-container tp-yt-paper-dialog{
-    Background-color: var(--main-color) !important;
-    backdrop-filter: var(--acceleratedBlur);
-    -webkit-backdrop-filter: var(--acceleratedBlur);
-}
-ytd-popup-container tp-yt-paper-dialog *{ /* youtube popup dialog text color */
-    color:var(--color) !important;
-}
-/******* HEADER ********/
-ytd-app > #content > #frosted-glass{
-    background: var(--bg-top-header,#fff) !important;
-    backdrop-filter: var(--acceleratedBlur) !important;
-    -webkit-backdrop-filter: var(--acceleratedBlur) !important;
-    
-}
-ytd-masthead > #background{
-    Background-color: var(--bg-top-header) !important;
-    backdrop-filter: var(--acceleratedBlur);
-    -webkit-backdrop-filter: var(--acceleratedBlur);
-    opacity: 1 !important;
-}
-
-/* header Notification Menu*/
-ytd-multi-page-menu-renderer{
-    background-color: unset !important;
-    background: var(--bg-top-header) !important;
-    backdrop-filter: var(--acceleratedBlur) !important;
-    -webkit-backdrop-filter: var(--acceleratedBlur) !important;
-}
-ytd-simple-menu-header-renderer { /* Notification Menu- header */
-    background-color: unset !important;
-    background: var(--bgAlpha3) !important;
-}
-
-/********** Home PAGE ************/
-ytd-browse[page-subtype="home"] #contents{
-    clip-path:unset !important;
-}
-ytd-browse[page-subtype="home"] #contents ytd-rich-item-renderer{
-    border-radius: var(--radius) !important;
-    box-sizing: border-box;
-    margin-left: var(--margin) !important;
-    margin-right: var(--margin) !important;
-    background: var(--bgBox) !important;
-    border: var(--border-thin) !important;
-    overflow: hidden !important;
-    backdrop-filter: var(--acceleratedBlur) !important;
-    -webkit-backdrop-filter: var(--acceleratedBlur) !important;
-}
-/* drawer menue */
-tp-yt-app-drawer #contentContainer{background-color:unset !important;} /* clean drawer menu background */
-tp-yt-app-drawer #guide-wrapper{ /* drawer expander */
-    background: var(--bg-drawer)  !important;
-    backdrop-filter: var(--acceleratedBlur) !important;
-    -webkit-backdrop-filter: var(--acceleratedBlur) !important;
-}
-ytd-mini-guide-renderer{ /* minimized(mini) drawer */
-    background: var(--bg-drawer) !important;
-    backdrop-filter: var(--acceleratedBlur) !important;
-    -webkit-backdrop-filter: var(--acceleratedBlur) !important;
-}
-
-/********** WATCH PAGE ************/
-ytd-page-manager ytd-watch-flexy #columns{
-    gap:10px;
-}
-ytd-page-manager ytd-watch-flexy #columns #primary,
-ytd-page-manager ytd-watch-flexy #columns #secondary {
-    min-height: 100%;
-    view-transition-name: unset !important;
-    overflow: clip;
-}
-ytd-page-manager ytd-watch-flexy #columns #secondary-inner > div{
-    /* Since around June 2026, YouTube allows rearranging the right-side panels (chat, comments, suggested videos). This CSS adjustment reduces the height by 50px to ensure content remains readable even with layout shifts. */
-    max-height: calc(100% - 50px);
-}
-ytd-watch-flexy:not([hidden]) #primary #primary-inner,
-ytd-watch-flexy:not([hidden]) #secondary #secondary-inner {
-    overflow:clip;
-    padding: var(--padding);
-    border-radius: var(--radius);
-    margin:var(--margin);
-}
-
-ytd-watch-flexy:not([hidden]) #primary #primary-inner::before,
-ytd-watch-flexy:not([hidden]) #secondary > #secondary-inner::before {
-    content: "";
-    position: sticky;
-    top: 0;
-    left: 0;
-    display: block;
-    width: 130%;
-    height: 100vh;
-    margin-top: -100vh;
-    margin-left: -10%;
-    background: var(--bgBoxWatch);
-    backdrop-filter: var(--acceleratedBlur);
-    -webkit-backdrop-filter: var(--acceleratedBlur);
-}
-
-/* Watch Page secondary video list */
-#secondary #contents yt-lockup-view-model{
-    padding:var(--padding);
-    border-bottom:var(--border-thin);
-    -webkit-transition: background 200ms ease;
-    transition: background 200ms ease;
-    /*background: var(--main-color);*/
-}
-#secondary #contents yt-lockup-view-model:hover{
-    padding:var(--padding);
-    background:var(--bgAlphaA);
-    border-bottom:var(--border-thin);
-}
-
-yt-chip-cloud-chip-renderer button:not([aria-selected="true"]) > *{
-    background-color:unset;
-    background-color: var(--main-col-light) !important;
-}
-
-ytd-watch-metadata button{ /* action button : like,dislike,share,save */
-    background-color: var(--bgAlpha3) !important;
-    fill:var(--color-invert) !important;
-}
-
-like-button-view-model yt-icon path {/* like button*/
-    fill: #4287f5 !important;
-}
-
-dislike-button-view-model yt-icon svg , dislike-button-view-model button svg { /*dis-Like*/
-    fill: #f702ca !important;
-}
-
-ytd-comment-engagement-bar #dislike-button svg {/*comment like/dis-Like button*/
-    fill: #f702ca !important;
-}
-ytd-comment-engagement-bar #like-button svg {
-    fill: #4287f5 !important;
-}
-/* Watch Page Play-List */
-ytd-watch-flexy ytd-playlist-panel-renderer #items {
-    background-color : unset !important;
-}
-
-/* description page under video*/
-#primary-inner ytd-watch-metadata #description:hover{
-    background-color: unset !important;
-    Background:var(--bgAlpha3) !important;
-}
-#primary-inner ytd-watch-metadata #description *{
+/* global font */
+body *:not(ytd-watch-flexy #player-container *, ytd-watch-flexy #player-container-outer * , ytd-player#inline-player *,yt-thumbnail-bottom-overlay-view-model *,#yThemeProConsentModal *){
     color: var(--color) !important;
 }
-/******** Channel Pages ********/
-tp-yt-app-header #contentContainer div{background-color:unset !important;} /* clean Channel Page background */
-tp-yt-app-header #contentContainer { /* drawer expander */
-    background: var(--main-color);
-    backdrop-filter: var(--acceleratedBlur) !important;
-    -webkit-backdrop-filter: var(--acceleratedBlur) !important;
+
+ytd-comments#comments #footer button:not([disabled]):not([aria-label="Cancel"]) * {
+    /* distinguish font color with background color */
+    color: var(--color-invert) !important;
 }
 
-ytd-browse[page-subtype="channels"]  yt-lockup-view-model,
-ytd-browse[page-subtype="channels"]  ytm-shorts-lockup-view-model-v2
-{
-    border-radius: var(--radius) !important;
-    box-sizing: border-box;
-    background: var(--bgBox) !important;
-    border: var(--border-thin) !important;
-    overflow: hidden !important;
-    backdrop-filter: var(--acceleratedBlur) !important;
-    -webkit-backdrop-filter: var(--acceleratedBlur) !important;
+#secondary #container #items{
+    z-index:1 !important; /* up bring video lists (video series) , z-index:unset/0 send video texts behides */
+}
+button * {/* All buttons top menu at #secondary/suggested video */
+    background-color:unset !important;
+}
+button[aria-selected="true"] > * { /* adjust bg color with text color, top menu at #secondary/suggested video */
+    background-color:var(--color-invert) !important;
+}
+/* text with background-color */
+ytd-author-comment-badge-renderer{
+    background: var(--color-invert) !important;
 }
 
-
-ytd-browse ytd-tabbed-page-header #page-header-container{ /* User-own Channel Page info: is a bit different DOM ex: visit your channel */
-    background: var(--bgBox) !important;
-    backdrop-filter: var(--acceleratedBlur) !important;
-    -webkit-backdrop-filter: var(--acceleratedBlur) !important;
-}
-ytd-browse ytd-tabbed-page-header #page-header-container #page-header{ /*User-own unset background */
-    background-color: unset !important;
-}
-/********Subscribtion********/
-ytd-browse[page-subtype="subscriptions"] #contents{
-    clip-path:unset !important;
-}
-
-ytd-rich-item-renderer{
-    border-radius: var(--radius) !important;
-    box-sizing: border-box;
-    margin-left: var(--margin) !important;
-    margin-right: var(--margin) !important;
-    background: var(--bgBox) !important;
-    border: var(--border-thin) !important;
-    overflow: hidden !important;
-    backdrop-filter: var(--acceleratedBlur) !important;
-    -webkit-backdrop-filter: var(--acceleratedBlur) !important;
-}
-
-ytd-browse[page-subtype="subscriptions"] #contents ytd-rich-item-renderer{
-    border-radius: var(--radius) !important;
-    box-sizing: border-box;
-    margin-left: var(--margin) !important;
-    margin-right: var(--margin) !important;
-    background: var(--bgBox) !important;
-    border: var(--border-thin) !important;
-    overflow: hidden !important;
-    backdrop-filter: var(--acceleratedBlur) !important;
-    -webkit-backdrop-filter: var(--acceleratedBlur) !important;
-}
-/*******All Subscription Page********/
-ytd-browse[page-subtype="subscriptions-channels"] ytd-section-list-renderer #contents {
-    z-index:1; /* to set sections in front  */
-}
-
-ytd-browse[page-subtype="subscriptions-channels"] ytd-section-list-renderer #contents ytd-item-section-renderer{
-    border-radius: var(--radius) !important;
-    box-sizing: border-box;
-    background: var(--bgBox) !important;
-    border: var(--border-thin) !important;
-    overflow: hidden !important;
-    backdrop-filter: var(--acceleratedBlur) !important;
-    -webkit-backdrop-filter: var(--acceleratedBlur) !important;
-    margin-bottom: var(--margin) !important;
-    padding: var(--padding);
-}
-
-/******** Search Result Pages ********      info: YouTube ignors <ytd-two-column-browse..> after search  */
-ytd-search yt-lockup-view-model,
-ytd-search ytd-video-renderer
-{
-    border-radius: var(--radius) !important;
-    box-sizing: border-box;
-    background: var(--bgBox) !important;
-    border: var(--border-thin) !important;
-    overflow: hidden !important;
-    backdrop-filter: var(--acceleratedBlur) !important;
-    -webkit-backdrop-filter: var(--acceleratedBlur) !important;
-}
-
-ytd-search ytd-secondary-search-container-renderer ytd-universal-watch-card-renderer
-{/* (intrducing card / more info card) location right-side ex: search > lady gaga  */
-    border-radius: var(--radius) !important;
-    box-sizing: border-box;
-    background: var(--bgBox) !important;
-    border: var(--border-thin) !important;
-    overflow: hidden !important;
-    backdrop-filter: var(--acceleratedBlur) !important;
-    -webkit-backdrop-filter: var(--acceleratedBlur) !important;
-    padding:var(--padding) !important;
-}
-ytd-search grid-shelf-view-model ytm-shorts-lockup-view-model-v2{ /* short video for search result. */
-    border-radius: var(--radius) !important;
-    box-sizing: border-box;
-    background: var(--bgBox) !important;
-    border: var(--border-thin) !important;
-    overflow: hidden !important;
-    backdrop-filter: var(--acceleratedBlur) !important;
-    -webkit-backdrop-filter: var(--acceleratedBlur) !important;
-}
-
-/******** Short Videos ********/
-ytd-shorts ytd-engagement-panel-section-list-renderer{
-    border-radius: var(--radius) !important;
-    box-sizing: border-box;
-    background: var(--bgBox) !important;
-    border: var(--border-thin) !important;
-    overflow: hidden !important;
-    backdrop-filter: var(--acceleratedBlur) !important;
-    -webkit-backdrop-filter: var(--acceleratedBlur) !important;
-    padding:var(--padding) !important;
-}
-
-/******** Watch History Page ********/
-ytd-browse[page-subtype="history"]  yt-lockup-view-model > div ,
-ytd-browse[page-subtype="history"]  ytm-shorts-lockup-view-model-v2
-{
-    border-radius: var(--radius) !important;
-    box-sizing: border-box;
-    background: var(--bgBox) !important;
-    border: var(--border-thin) !important;
-    overflow: hidden !important;
-    backdrop-filter: var(--acceleratedBlur) !important;
-    -webkit-backdrop-filter: var(--acceleratedBlur) !important;
-}
-
-ytd-browse[page-subtype="history"]  ytd-browse-feed-actions-renderer #contents{
-    border-radius: var(--radius) !important;
-    box-sizing: border-box;
-    background: var(--bgBox) !important;
-    border: var(--border-thin) !important;
-    overflow: hidden !important;
-    backdrop-filter: var(--acceleratedBlur) !important;
-    -webkit-backdrop-filter: var(--acceleratedBlur) !important;
-}
-
-
-/******** Watch Later Page ********/
-ytd-browse[page-subtype="playlist"]  ytd-playlist-video-renderer {
-    /* Watch Later Page uses attribut page-subtype=playlist */
-    border-radius: var(--radius) !important;
-    box-sizing: border-box;
-    background: var(--bgBox) !important;
-    border: var(--border-thin) !important;
-    overflow: hidden !important;
-    backdrop-filter: var(--acceleratedBlur) !important;
-    -webkit-backdrop-filter: var(--acceleratedBlur) !important;
-    margin-bottom: var(--margin) !important;
-}
-
-/******** Liked Video Page ********/
-ytd-browse[page-subtype="playlist"]  #contents yt-lockup-view-model{
-    /* Watch Later Page uses attribut page-subtype=playlist */
-    border-radius: var(--radius) !important;
-    box-sizing: border-box;
-    background: var(--bgBox) !important;
-    border: var(--border-thin) !important;
-    overflow: hidden !important;
-    backdrop-filter: var(--acceleratedBlur) !important;
-    -webkit-backdrop-filter: var(--acceleratedBlur) !important;
-    margin-bottom: var(--margin) !important;
-}
-/******** Mini Player ********/
-ytd-miniplayer {
-    border-radius: var(--radius) !important;
+/* HEADER */
+/* header searchbox dark-light-mode effect */
+ytd-masthead #center yt-searchbox div:has(> form), ytd-masthead #center yt-searchbox button{
+    border:var(--border-thin) !important;
     background: var(--main-col-light) !important;
-    border: var(--border-thin) !important;
-    overflow: hidden !important;
-    backdrop-filter: var(--acceleratedBlur) !important;
-    -webkit-backdrop-filter: var(--acceleratedBlur) !important;
 }
-ytd-miniplayer ytd-miniplayer-info-bar {
-    background-color: unset !important;
+ytd-masthead #center yt-searchbox button, ytd-masthead #center yt-searchbox button svg{
+    fill:var(--color) !important;
+    color:var(--color) !important;
+    background-color: var(--color-invert) !important;
 }
-ytd-playlist-panel-renderer #container,ytd-playlist-panel-renderer #container #items{
-    background-color: unset !important;
-}
-
-/************************/
-chip-bar-view-model button * {
-    background-color unset !important;
-}
-chip-bar-view-model button:not([aria-selected="true"]) {
-    background: var(--main-col-light);
-    border-radius: var(--radius);
+ytd-masthead #center yt-searchbox > div[role="listbox"] ,ytd-masthead #center yt-searchbox > div[role="listbox"] > *{
+    color:var(--color) !important;
+    background: var(--main-col-light) !important;
 }
 
-
-/******** Setting Page ********/
-ytd-browse[page-subtype="WEB_PAGE_TYPE_SETTINGS"] ytd-section-list-renderer #contents {
-    z-index:1; /* to set sections in front  */
+/* youtube logo */
+yt-icon svg , yt-button-shape svg{
+    fill: var(--color) !important;
 }
-ytd-browse[page-subtype="WEB_PAGE_TYPE_SETTINGS"] > ytd-settings-sidebar-renderer{
 
-    box-sizing: border-box;
+/* whatchlater/playlist page */
+ytd-playlist-panel-renderer #container *{
+    background-color:unset !important;
+    1background:unset !important;
+}
+
+/******** DRAWER MENU ********/
+tp-yt-iron-dropdown yt-contextual-sheet-layout{/* drawer-minimized, target: on-hover popup dropdown menu */
+    border:var(--border-thin) !important;
+    background: var(--main-col-light) !important;
+}
+/* Popup-menu popup-confirmation popup-notification */
+yt-notification-action-renderer tp-yt-paper-toast{
+    color:var(--color) !important;
     background: var(--main-col-dark) !important;
-    border: var(--border-thin) !important;
-    overflow: hidden !important;
-    backdrop-filter: var(--acceleratedBlur) !important;
-    -webkit-backdrop-filter: var(--acceleratedBlur) !important;
-}
-ytd-browse[page-subtype="WEB_PAGE_TYPE_SETTINGS"] ytd-section-list-renderer #contents ytd-item-section-renderer{
-    border-radius: var(--radius) !important;
-    box-sizing: border-box;
-    background: var(--bgBox) !important;
-    border: var(--border-thin) !important;
-    overflow: hidden !important;
-    backdrop-filter: var(--acceleratedBlur) !important;
-    -webkit-backdrop-filter: var(--acceleratedBlur) !important;
-    margin-bottom: var(--margin) !important;
-    padding: var(--padding);
-}
+    border:var(--border-thin) !important;
 
-/******** THE REST ********/
-
-yt-confirm-dialog-renderer{
-    /* ex: deleteing a comment? */
-    background:var(--main-col-light) !important;
-    background-color:var(--main-col-light) !important;
 }
-
-ytd-menu-popup-renderer{
-/* popup for vertical 3-dots ex: comments right side 3-dots delete/edit comment */
-background:var(--main-color) !important;
-background-color:var(--main-color) !important;
+#video-preview-container #media-container button * {
+    fill:#aaa !important;
 }
