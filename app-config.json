@@ -2,6 +2,6 @@
   "version": 1,
   "features": {
     "autoLike": true,
-    "privateComment": false
+    "privateComment": true
   }
 }
