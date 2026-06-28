@@ -1,8 +1,13 @@
-
+/* Version: 3 */
 
 /* global font */
 body *:not(ytd-watch-flexy #player-container *, ytd-watch-flexy #player-container-outer * , ytd-player#inline-player *,yt-thumbnail-bottom-overlay-view-model *,#yThemeProConsentModal *){
     color: var(--color) !important;
+}
+
+ytd-comments#comments #footer button:not([disabled]):not([aria-label="Cancel"]) * {
+    /* distinguish font color with background color */
+    color: var(--color-invert) !important;
 }
 
 #secondary #container #items{
