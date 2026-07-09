@@ -292,9 +292,12 @@ ytd-shorts ytd-engagement-panel-section-list-renderer{
     -webkit-backdrop-filter: var(--acceleratedBlur) !important;
     padding:var(--padding) !important;
 }
-
+ytd-shorts yt-reel-metapanel-view-model button{ /* action button : like,dislike,share,save */
+    background-color: var(--bgAlpha3) !important;
+    fill:var(--color-invert) !important;
+}
 /******** Watch History Page ********/
-ytd-browse[page-subtype="history"]  yt-lockup-view-model > div ,
+ytd-browse[page-subtype="history"]  yt-lockup-view-model > div,
 ytd-browse[page-subtype="history"]  ytm-shorts-lockup-view-model-v2
 {
     border-radius: var(--radius) !important;
@@ -393,6 +396,8 @@ ytd-browse[page-subtype="WEB_PAGE_TYPE_SETTINGS"] ytd-section-list-renderer #con
     padding: var(--padding);
 }
 
+
+
 /******** THE REST ********/
 
 yt-confirm-dialog-renderer{
@@ -407,3 +412,8 @@ background:var(--main-color) !important;
 background-color:var(--main-color) !important;
 }
 
+/***** REST ******/
+ytd-shorts #reel-overlay-container #cinematic-container{
+    /* cinamatic-container(short-videos) with background:#000 , preventing confliction  */
+    display: none;
+}
