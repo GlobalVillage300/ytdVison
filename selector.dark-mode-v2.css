@@ -28,16 +28,21 @@ ytd-author-comment-badge-renderer{
 /* header searchbox dark-light-mode effect */
 ytd-masthead #center yt-searchbox div:has(> form), ytd-masthead #center yt-searchbox button{
     border:var(--border-thin) !important;
-    background: var(--main-col-light) !important;
+    background: var(--color-invert) !important;
 }
 ytd-masthead #center yt-searchbox button, ytd-masthead #center yt-searchbox button svg{
     fill:var(--color) !important;
     color:var(--color) !important;
     background-color: var(--color-invert) !important;
 }
-ytd-masthead #center yt-searchbox > div[role="listbox"] ,ytd-masthead #center yt-searchbox > div[role="listbox"] > *{
+
+ytd-masthead #center yt-searchbox > div[role="listbox"] > *{
     color:var(--color) !important;
-    background: var(--main-col-light) !important;
+    background: none !important;
+}
+ytd-masthead #center yt-searchbox > div[role="listbox"] {
+    color:var(--color) !important;
+    background: var(--color-invert) !important;
 }
 
 /* youtube logo */
@@ -66,3 +71,10 @@ yt-notification-action-renderer tp-yt-paper-toast{
 #video-preview-container #media-container button * {
     fill:#aaa !important;
 }
+
+ytd-masthead > #background{
+    Background-color: var(--color-invert) !important;
+   
+}
+
+
