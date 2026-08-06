@@ -1,7 +1,20 @@
-/* Version: 3 */
+/* Version: 3.1 */
+
+
+html[dark] {
+    --color: #fff;
+    --color-invert : #111;
+    --border-thin: 1px solid #333;
+}
+
+html:not([dark]) {
+    --color: #111;
+    --color-invert : #fff;
+    --border-thin: 1px solid #ddd;
+}
 
 /* global font */
-body *:not(ytd-watch-flexy #player-container *, ytd-watch-flexy #player-container-outer * , ytd-player#inline-player *,yt-thumbnail-bottom-overlay-view-model *,#yThemeProConsentModal *){
+body *:not(ytd-watch-flexy #player-container *, ytd-watch-flexy #player-container-outer * , ytd-player#inline-player *,yt-thumbnail-bottom-overlay-view-model *,#yThemeProConsentModal * ){
     color: var(--color) !important;
 }
 
@@ -74,6 +87,7 @@ yt-notification-action-renderer tp-yt-paper-toast{
 
 ytd-masthead > #background{
     Background-color: var(--color-invert) !important;
+    opacity : 1 !important;
    
 }
 
