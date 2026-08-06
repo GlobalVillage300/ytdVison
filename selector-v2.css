@@ -38,10 +38,15 @@ ytd-app > #content > #frosted-glass{
     
 }
 ytd-masthead > #background{
-    Background-color: var(--bg-top-header) !important;
+    Background-color: unset !important;
+    Background: var(--bg-top-header) !important;
     backdrop-filter: var(--acceleratedBlur);
     -webkit-backdrop-filter: var(--acceleratedBlur);
     opacity: 1 !important;
+}
+ytd-masthead yt-searchbox div{
+    /* remove unneccasary vissual effect */
+    box-shadow: unset !important;
 }
 
 /* header Notification Menu*/
@@ -82,6 +87,22 @@ ytd-mini-guide-renderer{ /* minimized(mini) drawer */
     background: var(--bg-drawer) !important;
     backdrop-filter: var(--acceleratedBlur) !important;
     -webkit-backdrop-filter: var(--acceleratedBlur) !important;
+}
+ytd-two-column-browse-results-renderer[page-subtype="home"] chips-shelf-view-model button{
+    /* Home page inner chips-nav-menu , Home page sometime render inneral  Horizontal navigation menus (like top header menu) */
+    background-color: var(--bgAlpha3) !important;
+    fill: var(--color-invert) !important;
+    backdrop-filter: var(--blur);
+    -webkit-backdrop-filter: var(--blur);
+    margin:1px;
+    border-radius: var(--radius);
+}
+
+ytd-two-column-browse-results-renderer[page-subtype="home"] #dismissible div:has(> ytd-button-renderer){
+    background-color : unset !important;
+}
+ytd-two-column-browse-results-renderer[page-subtype="home"] #dismissible div:has(> ytd-button-renderer) button{
+    background-color : var(--main-color) !important;
 }
 
 /********** WATCH PAGE ************/
@@ -136,12 +157,17 @@ ytd-watch-flexy:not([hidden]) #secondary > #secondary-inner::before {
     border-bottom:var(--border-thin);
 }
 
+#secondary-inner ytd-playlist-panel-renderer#playlist:has(> #container){
+    /* folded playlist, contains playlist infor + title */
+    position: relative;
+    z-index:1;
+}
 yt-chip-cloud-chip-renderer button:not([aria-selected="true"]) > *{
     background-color:unset;
     background-color: var(--main-col-light) !important;
 }
 
-ytd-watch-metadata button{ /* action button : like,dislike,share,save */
+ytd-watch-metadata button , #subscribe-button-shape button{ /* action button : like,dislike,share,save */
     background-color: var(--bgAlpha3) !important;
     fill:var(--color-invert) !important;
 }
@@ -249,7 +275,8 @@ ytd-browse[page-subtype="subscriptions-channels"] ytd-section-list-renderer #con
 
 /******** Search Result Pages ********      info: YouTube ignors <ytd-two-column-browse..> after search  */
 ytd-search yt-lockup-view-model,
-ytd-search ytd-video-renderer
+ytd-search ytd-video-renderer, ytd-search yt-lockup-view-model,
+ytd-search ytd-channel-renderer
 {
     border-radius: var(--radius) !important;
     box-sizing: border-box;
@@ -280,6 +307,16 @@ ytd-search grid-shelf-view-model ytm-shorts-lockup-view-model-v2{ /* short video
     backdrop-filter: var(--acceleratedBlur) !important;
     -webkit-backdrop-filter: var(--acceleratedBlur) !important;
 }
+ytd-search  ytd-search-header-renderer #about-these-results ,ytd-search  ytd-search-header-renderer #filter-button {
+    /* search result has a header contains two buttons: FILTERS & About_RESULTS */
+    background-color: var(--bgAlpha3) !important;
+    fill: var(--color-invert) !important;
+    backdrop-filter: var(--blur);
+    -webkit-backdrop-filter: var(--blur);
+    margin:1px;
+    border-radius: var(--radius);
+}
+
 
 /******** Short Videos ********/
 ytd-shorts ytd-engagement-panel-section-list-renderer{
@@ -295,6 +332,15 @@ ytd-shorts ytd-engagement-panel-section-list-renderer{
 ytd-shorts yt-reel-metapanel-view-model button{ /* action button : like,dislike,share,save */
     background-color: var(--bgAlpha3) !important;
     fill:var(--color-invert) !important;
+}
+ytd-shorts reel-action-bar-view-model{
+    /* shorts side-buttons (like,dislike,comment) */
+    border-radius: var(--radius) !important;
+    background: var(--bgBox) !important;
+    border: var(--border-thin) !important;
+    backdrop-filter: var(--acceleratedBlur) !important;
+    -webkit-backdrop-filter: var(--acceleratedBlur) !important;
+    padding:var(--padding) !important;
 }
 /******** Watch History Page ********/
 ytd-browse[page-subtype="history"]  yt-lockup-view-model > div,
@@ -411,6 +457,9 @@ ytd-menu-popup-renderer{
 background:var(--main-color) !important;
 background-color:var(--main-color) !important;
 }
+
+
+
 
 /***** REST ******/
 ytd-shorts #reel-overlay-container #cinematic-container{
