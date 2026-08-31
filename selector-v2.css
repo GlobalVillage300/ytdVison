@@ -1,5 +1,4 @@
-/* Version: 3.1 */
-
+/* Version 3.2 */
 /* BACKGROUND GENERAL*/
 ytd-masthead#masthead ,ytd-masthead#masthead-container, #frosted-glass ,
 #content tp-yt-app-drawer #guide-content   {
@@ -49,8 +48,26 @@ ytd-masthead > #background{
 ytd-masthead yt-searchbox div{
     /* remove unneccasary vissual effect */
     box-shadow: unset !important;
+    border: none !important;
 }
 
+#header #chips-wrapper yt-chip-cloud-chip-renderer{
+        margin-right: 2px;
+        margin-left: 1px;
+        padding: 4px 10px 4px 10px;
+        background: linear var(--main-col-light);
+        transform: skewX(0deg);
+        border-radius: var(--radius);
+}
+#header #chips-wrapper yt-chip-cloud-chip-renderer *{
+    background: unset !important;
+}
+#header #chips-wrapper yt-chip-cloud-chip-renderer[selected]{
+        background: var(--col-tab);
+        border-radius: var(--radius) var(--radius) 0 0;
+        border-top: 4px solid transparent;
+        border-bottom: unset;
+}
 /* header Notification Menu*/
 ytd-multi-page-menu-renderer{
     background-color: unset !important;
@@ -77,6 +94,10 @@ ytd-browse[page-subtype="home"] #contents ytd-rich-item-renderer{
     overflow: hidden !important;
     backdrop-filter: var(--acceleratedBlur) !important;
     -webkit-backdrop-filter: var(--acceleratedBlur) !important;
+}
+
+ytd-browse[page-subtype="home"]  ytd-rich-section-renderer ytd-brand-video-shelf-renderer #dismissible{
+    background: linear-gradient(180deg , var(--main-color) 50%, transparent );
 }
 /* drawer menue */
 tp-yt-app-drawer #contentContainer{background-color:unset !important;} /* clean drawer menu background */
