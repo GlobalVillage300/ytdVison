@@ -1,0 +1,36 @@
+{
+  "notifications": [
+    {
+      "id": "support-nov-2026",
+      "type": "support",
+      "title": "Help Keep TubeVision Alive",
+      "content": "<p>TubeVision is free, but maintaining and improving it takes time and resources.</p><p>Your voluntary support helps us continue development. Thank you!</p>",
+      "image": "images/paypal-qr-demo.png",
+      "url": "https://example.com/tubevision-support-demo",
+      "expiration": "2027-02-28"
+    },
+    {
+      "id": "update-nov-2026",
+      "type": "info",
+      "title": "Update in Progress",
+      "content": "<p>We're improving TubeVision and fixing bugs. Thanks for your patience.</p>",
+      "image": "images/update.png",
+      "expiration": "2027-01-31"
+    },
+    {
+      "id": "coming-soon-nov-2026",
+      "type": "info",
+      "title": "Coming Soon",
+      "content": "<p>More refinements and features are on the way!</p>",
+      "image": "images/coming-soon.png",
+      "expiration": "2027-02-28"
+    },
+    {
+      "id": "service-2026",
+      "type": "important",
+      "title": "Temporary Service Notice",
+      "content": "<p>Some TubeVision features may be briefly unavailable during maintenance.</p>",
+      "expiration": "2027-01-31"
+    }
+  ]
+}
